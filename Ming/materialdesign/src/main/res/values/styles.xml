@@ -1,0 +1,54 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!-- 溢出菜单图标自定义-->
+        <!--<item name="actionOverflowButtonStyle">@style/ToolbarOverflow</item>-->
+
+    </style>
+
+    <!--CollapsingToolbarLayoutActivity页面的主题-->
+    <style name="AppTheme.CollapsingActivityTheme">
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent</item>
+    </style>
+
+
+    <style name="ToolbarPopupTheme" parent="@style/ThemeOverlay.AppCompat.Light">
+        <!--<item name="android:colorBackground">#000000</item>-->
+        <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle</item> <!--新增一个item，用于控制menu-->
+
+        <item name="textAppearanceLargePopupMenu">@style/Overflow_Menu_Text_style</item>
+    </style>
+
+    <!--溢出菜单文字颜色-->
+    <style name="Overflow_Menu_Text_style" parent="@style/TextAppearance.AppCompat.Widget.PopupMenu.Large">
+        <item name="android:textColor">#f00</item>
+    </style>
+
+    <!--修改弹出菜单的位置-->
+    <style name="OverflowMenuStyle" parent="Widget.AppCompat.Light.PopupMenu.Overflow">
+        <!-- 弹出层背景颜色 -->
+        <item name="android:popupBackground">#90000000</item>
+        <item name="overlapAnchor">false</item>  <!--把该属性改为false即可使menu位置位于toolbar之下-->
+
+    </style>
+
+    <!-- 溢出菜单图标自定义-->
+    <style name="ToolbarOverflow" parent="@android:style/Widget.ActionButton.Overflow">
+        <item name="android:src">@drawable/icon_back</item>
+    </style>
+
+    <!--修改toolbar标题文字大小-->
+    <style name="ToolbarTitleSize" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+</resources>

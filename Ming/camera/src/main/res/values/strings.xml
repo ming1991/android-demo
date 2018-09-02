@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Camera</string>
+
+    <string name="mc_app_name">MyCamera</string>
+    <string name="mc_facing_switch">切换</string>
+    <string name="mc_snapshot">拍照</string>
+</resources>

@@ -1,0 +1,1 @@
+include ':app', ':ming', ':exoplayer', ':soundpool', ':bankcardrecognition', ':diyihang', ':shejimoshi', ':camera', ':kotlin', ':notification', ':greendao', ':materialdesign', ':ndk'

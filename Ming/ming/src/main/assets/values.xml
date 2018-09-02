@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameVideo>
+    <FGX>...</FGX>
+    <SatVideo help="环绕视频线路修改">
+        <D_Line help="大陆电信线路" type="CDN" folder="sat">
+            <V>sun01.acc77.net/385214775</V>
+        </D_Line>
+        <L_Line help="大陆联通线路" type="CDN" folder="sat">
+            <V>sun01.acc77.net/385214775</V>
+        </L_Line>
+        <H_Line help="台湾H线路" type="CDN" folder="sat">
+            <V>sun01.acc77.net/385214775</V>
+        </H_Line>
+        <S_Line help="台湾S线路" type="CDN" folder="">
+            <V>sun01.acc77.net/385214775/sat</V>
+        </S_Line>
+        <T_Line help="台湾T线路" type="CDN" folder="">
+            <V>sun01.acc77.net/385214775/sat</V>
+        </T_Line>
+        <OTHER_Line help="其他线路" type="CDN" folder="">
+            <V>sun01.acc77.net/385214775/sat</V>
+        </OTHER_Line>
+        <SPARE_Line help="备用线路" type="NO" folder="sat">
+            <V>hkvd1.tp33.net:66</V>
+            <V>hkvd2.tp33.net:66</V>
+            <V>hkvd3.tp33.net:66</V>
+            <V>svd1.tp33.net:66</V>
+            <V>svd2.tp33.net:66</V>
+            <V>svd3.tp33.net:66</V>
+        </SPARE_Line>
+        <StreamNode help="视频节点">
+            <StreamName name="SAT" help="Sat直播"/>
+            <StreamName name="CESU" help="测速">cctv01</StreamName>
+        </StreamNode>
+    </SatVideo>
+    <FGX>
+        ####################### 影片播放线路修改 SPARE_Line必须设置非CDN线路 因为测速五条线路是读取此节点 注意:StreamNode节点 name是唯一的不要与其他配置冲突 比如出现在HrVideo节点里面的HR(环绕视频)不要与YpVideo里面的QC1冲突 #######################
+    </FGX>
+    <YpVideo help="影片播放线路修改">...</YpVideo>
+    <FGX>
+        ####################### 现场与桌边视频线路修改	#######################
+    </FGX>
+    <XcVideo help="现场视讯线路修改">
+        <D_Line help="大陆电信线路" type="CDN" folder="test">
+            <V>sun01.acc77.net/385214775</V>
+        </D_Line>
+        <L_Line help="大陆联通线路" type="CDN" folder="test">
+            <V>sun01.acc77.net/385214775</V>
+        </L_Line>
+        <H_Line help="台湾H线路" type="CDN" folder="test">
+            <V>sun01.acc77.net/385214775</V>
+        </H_Line>
+        <S_Line help="台湾S线路" type="CDN" folder="test">
+            <V>sun01.acc77.net/385214775</V>
+        </S_Line>
+        <T_Line help="台湾T线路" type="CDN" folder="test">
+            <V>sun01.acc77.net/385214775</V>
+        </T_Line>
+        <OTHER_Line help="其他线路" type="CDN" folder="test">
+            <V>sun01.acc77.net/385214775</V>
+        </OTHER_Line>
+        <SPARE_Line help="备用线路" type="NO" folder="test">
+            <V>jv2.tp33.net:66</V>
+            <V>wv5.tp33.net:66</V>
+            <V>hv1.tp33.net:66</V>
+            <V>hkvd1.tp33.net:66</V>
+            <V>svd1.tp33.net:66</V>
+        </SPARE_Line>
+    </XcVideo>
+    <VideoSpeed>
+        <V>wv5.tp33.net:66</V>
+        <V>jv2.tp33.net:66</V>
+        <V>hv1.tp33.net:66</V>
+        <V>hkvd1.tp33.net:66</V>
+    </VideoSpeed>
+    <GameTypePrames>
+        <Node prams="ZRLH" help="liveFQ 现场视频 liveLine 桌边视频">
+            <Type name="ZRLH" gameFQ="1" line="5" liveFQ="test,ts311||test,ts311||test,ts311" liveLine="live,cctv08||live,cctv08||live,cctv17"></Type>
+        </Node>
+        <Node prams="LP" help="liveFQ 现场视频 liveLine 桌边视频">
+            <Type name="LP" gameFQ="1" line="5" liveFQ="live,lp111||test,ts311||test,ts311||test,ts311" liveLine="live,cctv09||live,cctv10||live,cctv11"></Type>
+        </Node>
+        <Node prams="TB" help="liveFQ 现场视频 liveLine 桌边视频">
+            <Type name="TB" liveFQ="live,tb111||test,ts511||test,ts311||test,ts311" liveLine="live,cctv10||live,cctv11||live,cctv12"></Type>
+        </Node>
+        <Node prams="SG" help="liveFQ 现场视频 liveLine 桌边视频">
+            <Type name="SG" gameFQ="1" line="5" liveFQ="test,ts511||test,ts511||test,ts311" liveLine="live,cctv07||live,cctv08||live,cctv12"></Type>
+        </Node>
+        <Node prams="NN" help="liveFQ 现场视频 liveLine 桌边视频">
+            <Type name="NN" gameFQ="1" line="5" liveFQ="live,nn211||live,nn211||test,ts511" liveLine="live,cctv09||live,cctv12||live,cctv12"></Type>
+        </Node>
+        <Node prams="21D" help="liveFQ 现场视频 liveLine 桌边视频">
+            <Type name="21D" gameFQ="1" line="5" liveFQ="test,ts811||test,ts511||test,ts311" liveLine="live,cctv10||live,cctv08||live,cctv09"></Type>
+        </Node>
+        <Node prams="XFBJL" help="liveFQ 现场视频 liveLine 桌边视频">
+            <Type name="XFBJL" gameFQ="1" line="5" liveFQ="test,ts811||test,ts311||test,ts311||test,ts511||test,ts511||test,ts411||test,ts511||test,ts511||live,xfbj311||test,avbj0111||test,avbj0211" liveLine="live,cctv05||live,cctv05||live,cctv06||live,cctv05||live,cctv17||live,cctv17||live,cctv17||live,cctv17||live,cctv17||live,cctv17||live,cctv17"></Type>
+        </Node>
+        <Node prams="FT" help="liveFQ 现场视频 liveLine 桌边视频">
+            <Type name="FT" gameFQ="1" line="5" liveFQ="test,ts511||test,ts511||test,ts511" liveLine="live,cctv17||live,cctv17||live,cctv17"></Type>
+        </Node>
+        <Node prams="SD" help="liveFQ 现场视频 liveLine 桌边视频">
+            <Type name="SD" gameFQ="1" line="5" liveFQ="test,ts311||live,sd111||test,ts611" liveLine="live,cctv17||live,cctv17||live,cctv17"></Type>
+        </Node>
+        <Node prams="MPBJL" help="liveFQ 现场视频 liveLine 桌边视频">
+            <Type name="MPBJL" gameFQ="1" line="5" liveFQ="test,ts311||test,ts311||test,ts311||test,ts411||test,ts311||test,ts311||test,ts311||test,ts311||test,ts311||test,ts311||test,ts311||test,ts311||test,ts311||test,ts311||test,ts311" liveLine="live,cctv06||live,cctv07||live,cctv07||live,cctv07||live,cctv07||live,cctv12||live,cctv07||live,cctv07"></Type>
+        </Node>
+        <Node prams="YXX" help="liveFQ 现场视频 liveLine 桌边视频">
+            <Type name="YXX" gameFQ="1" line="5" liveFQ="live,yxx111||test,ts511||test,ts511||test,ts511||test,ts511||test,ts511||test,ts511||test,ts311" liveLine="live,cctv05||live,cctv06||live,cctv07||live,cctv07||live,cctv07"></Type>
+        </Node>
+        <Node prams="XFTB" help="liveFQ 现场视频 liveLine 桌边视频">
+            <Type name="XFTB" gameFQ="1" line="5" liveFQ="test,ts311||test,ts311||live,xftb111||test,ts511||live,xftb111||test,ts511||test,ts611||test,ts611" liveLine="live,cctv17||live,cctv17||live,cctv17||live,cctv17||live,cctv17"></Type>
+        </Node>
+        <Node prams="GMBJL" help="liveFQ 现场视频 liveLine 桌边视频">
+            <Type name="GMBJL" gameFQ="1" line="5" liveFQ="test,ts411||test,ts411||test,ts411" liveLine="live,cctv17||live,cctv17||live,cctv17"></Type>
+        </Node>
+    </GameTypePrames>
+    <GameVideoPrames>
+        <XC help="现场游戏视频坐标">...</XC>
+        <LH help="多桌游戏视频坐标">
+            <LZRLH1 name="LZRLH1">0,0,368,229|-95,-120,550,350</LZRLH1>
+            <LZRLH2 name="LZRLH2">-220,10,1230,460|-220,10,1230,460</LZRLH2>
+            <LZRLH3 name="LZRLH3">7,488,55,229|-77,-120,64,37</LZRLH3>
+        </LH>
+    </GameVideoPrames>
+</GameVideo>
